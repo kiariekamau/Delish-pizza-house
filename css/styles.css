@@ -1,12 +1,26 @@
 .pizza {
    text-align: center;
+   color: rgb(3, 177, 3);
+   font-size: 30mm;
+   font-style: italic;
 }
 .pizza img {
     height: 80mm;
     width: 300mm;
 }
+.details {
+    text-align: center;
+    font-size: 8mm;
+    font-family: sans-serif;
+    color: coral;
+}
+.details h2 {
+    font-style: oblique;
+    font-size: 12mm;
+    color: rgb(3, 172, 3);
+}
 body {
-    background-image: url(../img/Background\ image.jpg);
+    background-image: url(../img/backgroundimage2.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
 };

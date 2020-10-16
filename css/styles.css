@@ -1,0 +1,12 @@
+.pizza {
+   text-align: center;
+}
+.pizza img {
+    height: 80mm;
+    width: 300mm;
+}
+body {
+    background-image: url(../img/Background\ image.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+};

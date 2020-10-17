@@ -17,6 +17,7 @@
            <div class="col-md-4">
           <img src="img/logo.jpg">
            </div>
+           <div class="landingPage">
            <div class="col-md-8">
             <h1><strong>DELISH PIZZA HOUSE</strong></h1>
              <p>Buon Appetito!</p>
@@ -27,6 +28,33 @@
             <p>We here at Delish Pizza House serve you with a finger-licking dish of pizza at a convinient price and to your satisfaction!</p>
              <p>We also do quick deliveries to your place of choosing.</p>
          </div>
-         <h3></h3>
+         </div>
+         <h3>Place your Order</h3>
+          <form id="orderNow">
+           <label for ="location">Location/Address</label>
+            <input type="form-control" id="location" placeholder="Karen,New karen lane,house no.45">
+           <label for ="pizzaSize">Choose the size of pizza:</label>
+            <select class="form control" id="pizzaSize">
+              <option></option>
+              <option id="smallSize">Small </option>
+              <option id="mediumSize">Medium </option>
+              <option id="largeSize">Large</option>
+            </select>
+           <label for="pizzaCrust">Choose what kind of crust you would like the pizza to have</label>
+            <select class="form-control" id="pizzaCrust">
+              <option></option>
+              <option id="crispyCrust">Crispy</option>
+              <option id="stuffedCrust">Stuffed</option>
+              <option id="gluten-free">Gluten-free</option>
+            </select>
+            <label for="toppings">Choose the extra topping you want on your pizza.</label>
+             <select class="form-control" id="toppings">
+               <option></option>
+               <option id="Bacon"></option>
+               <option id="Chicken"></option>
+               <option id="Beef steak"></option>
+               <option id="Pepperoni"></option>
+             </select>
+          </form>
      </body>
  </html>

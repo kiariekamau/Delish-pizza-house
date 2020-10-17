@@ -53,6 +53,7 @@
     color: rgb(3, 172, 3);
     text-align: center;
 }
-body {
-   background-color: black
-};
+.orderNow {
+    text-align: left;
+    font-size: 8mm;
+}

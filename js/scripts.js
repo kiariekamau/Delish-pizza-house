@@ -33,8 +33,8 @@ function numberOfPizzaPrice () {
     var numberOfPizza = $("#numberOfPizza").val();
     return parseInt(numberOfPizza);
 }
-function pizzaPrice () {
-    var totalPrice = parseInt(sizePrice()+ crustPrice()+ toppingsPrice()) + numberOfPizzaPrice();
+function pizzaPrice (e) {
+    var totalPrice = (sizePrice()+ crustPrice()+ toppingsPrice()) * numberOfPizzaPrice();
     console.log(totalPrice);
 
     $("#price").text(+ totalPrice)
@@ -75,6 +75,29 @@ $(document).ready(function(){
      $("#pizzaForDelivery").hide();
      $("ul#pizzaForPickUp").append("<li>" + pizzaOrder.addEverything() + "<li>");
     })
-    
+    $("#delivery").click(function(event){
+        event.preventDefault();
+
+        $("#delivery").show();
+        $("#pickUp").hide();
+        
+        var address=$("#location").val();
+        $("#delivery").text("The order will be delivered at " + address)
+
+     var type = $("#pizzaType").val();
+     var size = $("#pizzaSize").val();
+     var crust = $("#pizzaCrust").val();
+     var topping = $("#toppings").val();
+     var numberOfPizzas =$("#numberOfPizzas").val();
+
+     var pizzaOrder = new Pizza(type, size, crust, topping, numberOfPizzas)
+
+     $("#pizzaForPickUp").hide();
+     $("#pizzaForDelivery").show();
+     $("ul#pizzaForDelivery").append("<li>" + pizzaOrder.addEverything() + "<li>");
+    })
+    $("#priceCheckout").submit(function(){
+        return checkout()
+    })
 
 })

@@ -30,10 +30,11 @@ function toppingsPrice () {
     return pizzaToppingPrice
 }
 function numberOfPizzaPrice () {
-    var numberOfPizza = $("#numberOfPizza").val();
-    return parseInt(numberOfPizza);
+    var pizzas = $("#numberOfPizzas").val();
+    var numberOfPizza = parseInt(pizzas)
+    return numberOfPizza
 }
-function pizzaPrice (e) {
+function pizzaPrice () {
     var totalPrice = (sizePrice()+ crustPrice()+ toppingsPrice()) * numberOfPizzaPrice();
     console.log(totalPrice);
 

@@ -31,7 +31,7 @@
 .details {
     background-image: url(../img/pizza.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;;
     height: 650px;
     width: 96%;
     text-align: center;
@@ -43,7 +43,7 @@
     text-align: center;
     font-size: 8mm;
     font-family: sans-serif;
-    color: rgb(5, 204, 5);
+    color: white;
     opacity: 0.9;
 }
 .details h2 {
@@ -52,15 +52,32 @@
     color: coral;
     text-align: center;
 }
-.orderNow {
-    text-align: left;
+body {
+    background-color: black;
+}
+.container {
     font-size: 8mm;
+    font-family: initial;
+    background-color: rgb(53, 52, 52);
+    color: whitesmoke;
+    padding-top: 20mm;
+    padding-bottom: 40mm;
+    text-align: center;
+}
+.container h3 {
+    text-align: center;
+    font-size: 13mm;
+    font-style: oblique;
+    padding-bottom: 10mm;
+}
+.container p{
+    padding-top: 10mm;
 }
 .placeOrder {
     background-image: url(../img/backgroundimage2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 250mm;
+    height: 300mm;
     font-size: 8mm;
     color: whitesmoke;
     font-family: cursive;
@@ -74,4 +91,16 @@
 }
 .placeOrder label {
     padding-top: 10mm;
+}
+.placeOrder h4 {
+    font-size: 12mm;
+    text-align: center;
+    padding-bottom: 10mm;
+}
+.placeOrder h5 {
+    font-size: 8mm;
+}
+.contact {
+    background-color: black;
+    text-align: center;
 }

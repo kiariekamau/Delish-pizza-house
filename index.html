@@ -29,31 +29,44 @@
           <div class="row">
            <div class="col-md-6">
             <form id="orderNow">
-             <label for ="location">Location/Address</label>
-              <input type="form-control" id="location" placeholder="e.g Karen,New karen lane,house no.45">
+             <label for ="pizzaType">Choose pizza type:</label>
+              <select class="form-control" id="pizzaType">
+                <option></option>
+                <option>Pepperoni</option>
+                <option >Hawaiian</option>
+                <option >BBQ steak</option>
+                <option >BBQ chicken</option>
+                <option >Meat Deluxe</option>
+                <option >Veg feast</option>
+                <option >Veg Tikka</option>
+                <option >Chicken Tikka</option>
+                <option >Peri-peri Chicken</option>
+                <option >Chicken Macon Bacon</option>
+                <option >Chicken & Mushroom</option>
+              </select>
              <label for ="pizzaSize">Choose the size of pizza:</label>
               <select class="form control" id="pizzaSize">
                <option></option>
-               <option id="smallSize">Small </option>
-               <option id="mediumSize">Medium </option>
-               <option id="largeSize">Large</option>
+               <option id="smallSize">Small @Ksh.400</option>
+               <option id="mediumSize">Medium @Ksh.700 </option>
+               <option id="largeSize">Large @Ksh.900</option>
               </select>
              <label for="pizzaCrust">Choose what kind of crust you would like the pizza to have:</label>
               <select class="form-control" id="pizzaCrust">
                <option></option>
-               <option >Crispy</option>
-               <option >Stuffed</option>
-               <option >Gluten-free</option>
+               <option >Crispy @ksh.100</option>
+               <option >Stuffed @ksh.150</option>
+               <option >Gluten-free @ksh.200</option>
               </select>
-             <label for="toppings">Choose the extra topping you want on your pizza:</label>
+             <label for="toppings">Choose the extra topping you want on your pizza at ksh.100:</label>
               <select class="form-control" id="toppings">
                <option></option>
                <option>Bacon</option>
                <option>Chicken</option>
-               <option>Beef steak</option>
+               <option>Beef strips</option>
                <option>Pepperoni</option>
-               <option>Cheese</option>
-               <option >Pineapple</option>
+               <option>Extra Cheese</option>
+               <option>Pineapple</option>
               </select>
              <label for="numberOfPizzas">How many pizzas:</label>
               <input class="form-control" type="number" min="1" id="numberOfPizzas">
@@ -62,7 +75,11 @@
            </div>
            <div class="col-md-6">
             <p>You may add other different orders by re-filling the fields before checking out.</p>
-             <button type="submit" class="btn btn-warning" onclick="finalPrice()" id="priceCheckout">Checkout</button>
+              <button type="submit" class="btn btn-warning"  id="priceCheckout">Checkout</button>
+            <h4>Your Order</h4>
+              <ul id="orderedPizza">
+
+              </ul>
            </div>
           </form>
          </div>

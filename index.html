@@ -15,46 +15,59 @@
          <div class="pizza">
           <div class="row">
            <div class="col-md-4">
-          <img src="img/logo.jpg">
+            <img src="img/logo.jpg">
            </div>
-           <div class="landingPage">
+          <div class="landingPage">
            <div class="col-md-8">
             <h1><strong>DELISH PIZZA HOUSE</strong></h1>
              <p>Buon Appetito!</p>
            </div>
-         </div>
-         <div class="details">
+          </div>
+          <div class="details">
            <h2><strong>Welcome!</strong></h2>
             <p>We here at Delish Pizza House serve you with a finger-licking dish of pizza at a convinient price and to your satisfaction!</p>
              <p>We also do quick deliveries to your place of choosing.</p>
          </div>
          </div>
+         <div class="placeOrder">
          <h3>Place your Order</h3>
-          <form id="orderNow">
-           <label for ="location">Location/Address</label>
-            <input type="form-control" id="location" placeholder="Karen,New karen lane,house no.45">
-           <label for ="pizzaSize">Choose the size of pizza:</label>
-            <select class="form control" id="pizzaSize">
-              <option></option>
-              <option id="smallSize">Small </option>
-              <option id="mediumSize">Medium </option>
-              <option id="largeSize">Large</option>
-            </select>
-           <label for="pizzaCrust">Choose what kind of crust you would like the pizza to have</label>
-            <select class="form-control" id="pizzaCrust">
-              <option></option>
-              <option id="crispyCrust">Crispy</option>
-              <option id="stuffedCrust">Stuffed</option>
-              <option id="gluten-free">Gluten-free</option>
-            </select>
-            <label for="toppings">Choose the extra topping you want on your pizza.</label>
-             <select class="form-control" id="toppings">
+          <div class="row">
+           <div class="col-md-6">
+            <form id="orderNow">
+             <label for ="location">Location/Address</label>
+              <input type="form-control" id="location" placeholder="Karen,New karen lane,house no.45">
+             <label for ="pizzaSize">Choose the size of pizza:</label>
+              <select class="form control" id="pizzaSize">
                <option></option>
-               <option id="Bacon"></option>
-               <option id="Chicken"></option>
-               <option id="Beef steak"></option>
-               <option id="Pepperoni"></option>
-             </select>
+               <option id="smallSize">Small </option>
+               <option id="mediumSize">Medium </option>
+               <option id="largeSize">Large</option>
+              </select>
+             <label for="pizzaCrust">Choose what kind of crust you would like the pizza to have:</label>
+              <select class="form-control" id="pizzaCrust">
+               <option></option>
+               <option >Crispy</option>
+               <option >Stuffed</option>
+               <option >Gluten-free</option>
+              </select>
+             <label for="toppings">Choose the extra topping you want on your pizza:</label>
+              <select class="form-control" id="toppings">
+               <option></option>
+               <option>Bacon</option>
+               <option>Chicken</option>
+               <option>Beef steak</option>
+               <option>Pepperoni</option>
+               <option>Cheese</option>
+               <option >Pineapple</option>
+              </select>
+             <label for="numberOfPizzas">How many pizzas:</label>
+              <input class="form-control" type="number" min="1" id="numberOfPizzas">
+           </div>
+           <div class="col-md-6">
+             <button type="submit" class="btn btn-success" onclick="price()" id="pickUp">Pick up</button>
+             <button type="submit" class="btn btn-success" onclick="price()" id="delivery">Deliver to your destination</button>
+           </div>
           </form>
+         </div>
      </body>
  </html>

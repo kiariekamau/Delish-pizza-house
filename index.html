@@ -70,14 +70,19 @@
               </select>
              <label for="numberOfPizzas">How many pizzas:</label>
               <input class="form-control" type="number" min="1" id="numberOfPizzas">
-             <button type="submit" class="btn btn-success" onclick="price()" id="pickUp">Pick up</button>
-             <button type="submit" class="btn btn-success" onclick="price()" id="delivery">Deliver to your destination</button>
+             <button type="submit" class="btn btn-success" onclick="pizzaPrice()" id="pickUp">Pick up</button>
+             <button type="submit" class="btn btn-success" onclick="pizzaPrice()" id="delivery">Deliver to your destination</button>
            </div>
            <div class="col-md-6">
             <p>You may add other different orders by re-filling the fields before checking out.</p>
               <button type="submit" class="btn btn-warning"  id="priceCheckout">Checkout</button>
-            <h4>Your Order</h4>
-              <ul id="orderedPizza">
+            <h4>Cart</h4>
+             <h5>Price:Ksh. <span id="price"></span></h5>
+             <h5>Details:</h5>
+             <ul id="pizzaForPickUp">
+
+              </ul>
+              <ul id="pizzaForDelivery">
 
               </ul>
            </div>

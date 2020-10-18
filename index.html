@@ -8,14 +8,16 @@
          <title>Delish Pizza house</title>
      </head>
      <body>
+       <div class="homepage" id="home">
          <div class="navigationBar">
-          <a class="active" href="home">HOME </a>
-          <a href="order"> ORDER NOW </a>
+          <a class="active" href="#home">HOME </a>
+          <a href="#order"> ORDER NOW </a>
+          <a href="#about">ABOUT US</a>
+          <a href="#contactUs">CONTACT US</a>
          </div>
-         <div class="homePage">
           <div class="title">
-             <h1><strong>DELISH PIZZA HOUSE</strong></h1>
-              <p>Buon Appetito!</p>
+           <h1><strong>DELISH PIZZA HOUSE</strong></h1>
+            <p>Buon Appetito!</p>
           </div>
            <img src="img/logo.jpg">
           <div class="details">
@@ -23,13 +25,13 @@
             <p><strong>What are you waiting for? Brighten your day with Delish pizza !</strong></p>
              <p><strong>Place your order now!</strong></p>
           </div>
-         </div>
-         <div class="container">
+       </div>
+         <div class="container" id="about">
           <h3>About Us</h3>
            <p>Delish Pizza House was first introduced by the famous Chef Kiarie Kamau during the year 2020.</p>
             <p>We are located in Nairobi and do deliveries within Nairobi.</p>
          </div>
-         <div class="placeOrder">
+         <div class="placeOrder" id="order">
           <h3>Place your Order</h3>
           <div class="row">
            <div class="col-md-6">
@@ -91,11 +93,13 @@
 
                </ul>
               <p>You may add other different orders by re-filling the fields before checking out.</p>
-               <button type="submit" class="btn btn-warning"  id="priceCheckout">Checkout</button>
+               <button type="submit" class="btn btn-warning"  id="priceCheckout" onclick="checkout()">Checkout</button>
+            <h4>All Orders:</h4>
+             <ul id="finalList"></ul>
            </div>
           </form>
          </div>
-         <div class="contact">
+         <div class="contact" id="contactUs">
            <h3>Contact us at:</h3>
             <p>Tell no.0700175769 / delishpizzahouse@gmail.com</p>
          </div>

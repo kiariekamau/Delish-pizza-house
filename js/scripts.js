@@ -61,7 +61,13 @@ function deliveryPizza () {
 function pickUpPizza () {
     alert("Your order will be ready in 20min!");
 }
-
+function resetFields() {
+    var type = $("select#pizzaType").val("");
+    var size = $("select#pizzaSize").val("");
+    var crust = $("select#pizzaCrust").val("");
+    var topping = $("select#toppings").val("");
+    var numberOfPizzas =$("input#numberOfPizzas").val("");
+   }
 
 
 
@@ -120,13 +126,8 @@ $(document).ready(function(){
    
         $("ul#finalList").append("<li>" + pizzaOrder.addEverything() + "</li>");
 
-        function resetFields() {
-            var type = $("select#pizzaType").val("");
-            var size = $("select#pizzaSize").val("");
-            var crust = $("select#pizzaCrust").val("");
-            var topping = $("select#toppings").val("");
-            var numberOfPizzas =$("input#numberOfPizzas").val("");
-           }
+    resetFields();
+
     });
    
 

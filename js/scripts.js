@@ -53,9 +53,17 @@ Pizza.prototype.addEverything = function () {
     return this.type + "," + this.size + "," + this.crust + "," + this.topping + "," + this.numberOfPizzas 
 }
 
-function checkout () {
-    alert("Your order has been received!");
+function deliveryPizza () {
+    var locationDelivery = $("#location").val();
+    alert("Your order will be delivered to " + locationDelivery);
 }
+
+function pickUpPizza () {
+    alert("Your order will be ready in 20min!");
+}
+
+
+
 
 $(document).ready(function(){
     $("#pickUp").click(function(event){
@@ -74,7 +82,8 @@ $(document).ready(function(){
 
      $("#pizzaForPickUp").show();
      $("#pizzaForDelivery").hide();
-     $("ul#pizzaForPickUp").append("<li>" + pizzaOrder.addEverything() + "<li>");
+     $("ul#pizzaForPickUp").append("<li>" + pizzaOrder.addEverything() + "</li>");
+
     })
     $("#delivery").click(function(event){
         event.preventDefault();
@@ -95,10 +104,30 @@ $(document).ready(function(){
 
      $("#pizzaForPickUp").hide();
      $("#pizzaForDelivery").show();
-     $("ul#pizzaForDelivery").append("<li>" + pizzaOrder.addEverything() + "<li>");
-    })
-    $("#priceCheckout").submit(function(){
-        return checkout()
-    })
+     $("ul#pizzaForDelivery").append("<li>" + pizzaOrder.addEverything() + "</li>");
 
-})
+    })
+    $("#priceCheckout").click(function(event){
+        event.preventDefault();
+
+        var type = $("#pizzaType").val();
+        var size = $("#pizzaSize").val();
+        var crust = $("#pizzaCrust").val();
+        var topping = $("#toppings").val();
+        var numberOfPizzas =$("#numberOfPizzas").val();
+   
+        var pizzaOrder = new Pizza(type, size, crust, topping, numberOfPizzas)
+   
+        $("ul#finalList").append("<li>" + pizzaOrder.addEverything() + "</li>");
+
+        function resetFields() {
+            var type = $("select#pizzaType").val("");
+            var size = $("select#pizzaSize").val("");
+            var crust = $("select#pizzaCrust").val("");
+            var topping = $("select#toppings").val("");
+            var numberOfPizzas =$("input#numberOfPizzas").val("");
+           }
+    });
+   
+
+});

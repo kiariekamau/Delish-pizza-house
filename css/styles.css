@@ -28,6 +28,7 @@
    padding-right: 55%;
    padding-top: 30mm;
 }
+
 .details {
     background-image: url(../img/pizza.jpg);
     background-repeat: no-repeat;
@@ -104,3 +105,21 @@ body {
     background-color: black;
     text-align: center;
 }
+@media screen and (max-width: 992px) {
+
+    .title {
+       color: whitesmoke;
+       font-size: 5mm;
+       font-style: italic;
+       background-color: black;
+       float: left;
+       padding-top: 10mm;
+    }
+    .details p{
+        text-align: center;
+        font-size: 8mm;
+        font-family: sans-serif;
+        color: white;
+        opacity: 0.9;
+    }
+  } 
